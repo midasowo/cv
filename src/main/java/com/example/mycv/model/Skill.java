@@ -3,7 +3,7 @@ package com.example.mycv.model;
 import javax.persistence.*;
 
 @Entity
-public class Skills {
+public class Skill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +15,10 @@ public class Skills {
     @JoinColumn(name = "about_id")
     private About about;
 
-    public Skills() {
+    public Skill() {
     }
 
-    public Skills(Long id, String icon, String description, About about) {
+    public Skill(Long id, String icon, String description, About about) {
         this.id = id;
         this.icon = icon;
         this.description = description;

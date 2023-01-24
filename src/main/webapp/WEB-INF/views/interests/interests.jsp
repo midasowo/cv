@@ -8,7 +8,7 @@
 <%@include file="../dynamic/navigationMain.jspf" %>
 <!-- Page Content-->
 <div class="container-fluid p-0">
-    <!-- Interests-->
+    <!-- Interest-->
     <section class="resume-section" id="interests">
         <div class="resume-section-content">
             <h2 class="mb-5">Interests</h2>

@@ -12,8 +12,10 @@ public class About {
     private Long id;
     private String firstName;
     private String lastName;
+    private String title;
     private String description;
-    private String icon;
+    private String linkedin;
+    private String github;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, mappedBy = "about")
     private Set<Contact> contacts = new HashSet<>();
@@ -25,20 +27,22 @@ public class About {
     private Set<Experience> experiences = new HashSet<>();
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, mappedBy = "about")
-    private Set<Interests> interests = new HashSet<>();
+    private Set<Interest> interests = new HashSet<>();
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, mappedBy = "about")
-    private Set<Skills> skills = new HashSet<>();
+    private Set<Skill> skills = new HashSet<>();
 
     public About() {
     }
 
-    public About(Long id, String firstName, String lastName, String description, String icon, Set<Contact> contacts, Set<Education> educations, Set<Experience> experiences, Set<Interests> interests, Set<Skills> skills) {
+    public About(Long id, String firstName, String lastName, String title, String description, String linkedin, String github, Set<Contact> contacts, Set<Education> educations, Set<Experience> experiences, Set<Interest> interests, Set<Skill> skills) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.title = title;
         this.description = description;
-        this.icon = icon;
+        this.linkedin = linkedin;
+        this.github = github;
         this.contacts = contacts;
         this.educations = educations;
         this.experiences = experiences;
@@ -70,6 +74,14 @@ public class About {
         this.lastName = lastName;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -78,12 +90,20 @@ public class About {
         this.description = description;
     }
 
-    public String getIcon() {
-        return icon;
+    public String getLinkedin() {
+        return linkedin;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
+    }
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
     }
 
     public Set<Contact> getContacts() {
@@ -110,19 +130,19 @@ public class About {
         this.experiences = experiences;
     }
 
-    public Set<Interests> getInterests() {
+    public Set<Interest> getInterests() {
         return interests;
     }
 
-    public void setInterests(Set<Interests> interests) {
+    public void setInterests(Set<Interest> interests) {
         this.interests = interests;
     }
 
-    public Set<Skills> getSkills() {
+    public Set<Skill> getSkills() {
         return skills;
     }
 
-    public void setSkills(Set<Skills> skills) {
+    public void setSkills(Set<Skill> skills) {
         this.skills = skills;
     }
 }

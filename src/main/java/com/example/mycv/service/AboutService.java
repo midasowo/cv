@@ -4,6 +4,8 @@ import com.example.mycv.model.About;
 import com.example.mycv.repository.AboutRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AboutService {
 
@@ -23,6 +25,10 @@ public class AboutService {
 
     public void removeAbout(Long id) {
         repo.deleteById(id);
+    }
+
+    public List<About> getAboutList() {
+        return repo.findAll();
     }
 
 }
