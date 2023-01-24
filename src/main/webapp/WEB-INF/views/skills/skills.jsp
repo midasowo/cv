@@ -95,35 +95,14 @@
                 </li>
             </ul>
             <div class="subheading mb-3">Soft skills</div>
+            <c:forEach items="${skills}" var="title">
             <ul class="fa-ul mb-0">
                 <li>
                     <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    A
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    B
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    C
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    D
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    E
-                <li>
-                    <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    F
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                    G
+                        ${title.softSkill}
                 </li>
             </ul>
+            </c:forEach>
         </div>
     </section>
     <hr class="m-0"/>
