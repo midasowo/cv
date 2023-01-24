@@ -1,9 +1,6 @@
 package com.example.mycv.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Experience {
@@ -16,4 +13,8 @@ public class Experience {
     private String start;
     private String finish;
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "about_id")
+    private About about;
 }

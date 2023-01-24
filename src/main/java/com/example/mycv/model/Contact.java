@@ -8,16 +8,20 @@ public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String home;
+    private String homeCity;
     private String phone;
     private String email;
     private String icon;
 
+    @ManyToOne
+    @JoinColumn(name = "about_id")
+    private About about;
+
     public Contact() {
     }
 
-    public Contact(String home, String phone, String email, String icon) {
-        this.home = home;
+    public Contact(String homeCity, String phone, String email, String icon) {
+        this.homeCity = homeCity;
         this.phone = phone;
         this.email = email;
         this.icon = icon;
@@ -31,12 +35,12 @@ public class Contact {
         this.id = id;
     }
 
-    public String getHome() {
-        return home;
+    public String getHomeCity() {
+        return homeCity;
     }
 
-    public void setHome(String home) {
-        this.home = home;
+    public void setHomeCity(String home) {
+        this.homeCity = home;
     }
 
     public String getPhone() {
