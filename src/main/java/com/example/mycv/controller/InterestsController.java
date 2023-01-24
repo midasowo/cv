@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class InterestsController {
 
     @GetMapping("/interests")
-    public String getContact() {
+    public String getInterests() {
         return "interests/interests";
     }
 }

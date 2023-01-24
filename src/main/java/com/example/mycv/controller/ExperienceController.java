@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ExperienceController {
 
     @GetMapping("/experience")
-    public String getContact() {
+    public String getExperience() {
         return "experience/experience";
     }
 }

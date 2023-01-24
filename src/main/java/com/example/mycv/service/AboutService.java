@@ -17,6 +17,9 @@ public class AboutService {
         repo.save(about);
     }
 
+    public void editAbout(About about) {
+        repo.save(about);
+    }
 
     public void removeAbout(Long id) {
         repo.deleteById(id);
