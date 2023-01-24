@@ -1,7 +1,6 @@
 package com.example.mycv.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 
 @Entity
 public class Contact {
