@@ -1,8 +1,7 @@
 package com.example.mycv.service;
 
-import com.example.mycv.model.Interest;
 import com.example.mycv.model.Skill;
-import com.example.mycv.repository.SkillReposiotry;
+import com.example.mycv.repository.SkillRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +9,9 @@ import java.util.List;
 @Service
 public class SkillService {
 
-    private final SkillReposiotry repo;
+    private final SkillRepository repo;
 
-    public SkillService(SkillReposiotry repo) {
+    public SkillService(SkillRepository repo) {
         this.repo = repo;
     }
 

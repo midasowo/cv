@@ -17,7 +17,7 @@
                     <div class="subheading mb-4">
                         <span class="text-primary">Just Edit The Fields</span>
                     </div>
-                    <p class="lead mb-5">You can write descriptions</p>
+                    <p class="lead mb-5">See how easy you will create your own CV!</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/krzysztof-miduch/" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a>

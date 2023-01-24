@@ -9,7 +9,8 @@ public class Skill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String icon;
-    private String description;
+    private String techSkill;
+    private String softSkill;
 
     @ManyToOne
     @JoinColumn(name = "about_id")
@@ -18,10 +19,11 @@ public class Skill {
     public Skill() {
     }
 
-    public Skill(Long id, String icon, String description, About about) {
+    public Skill(Long id, String icon, String techSkill, String softSkill, About about) {
         this.id = id;
         this.icon = icon;
-        this.description = description;
+        this.techSkill = techSkill;
+        this.softSkill = softSkill;
         this.about = about;
     }
 
@@ -41,12 +43,20 @@ public class Skill {
         this.icon = icon;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTechSkill() {
+        return techSkill;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTechSkill(String techSkill) {
+        this.techSkill = techSkill;
+    }
+
+    public String getSoftSkill() {
+        return softSkill;
+    }
+
+    public void setSoftSkill(String softSkill) {
+        this.softSkill = softSkill;
     }
 
     public About getAbout() {
@@ -57,3 +67,5 @@ public class Skill {
         this.about = about;
     }
 }
+
+
