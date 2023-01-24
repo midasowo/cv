@@ -20,11 +20,13 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(String homeCity, String phone, String email, String icon) {
+    public Contact(Long id, String homeCity, String phone, String email, String icon, About about) {
+        this.id = id;
         this.homeCity = homeCity;
         this.phone = phone;
         this.email = email;
         this.icon = icon;
+        this.about = about;
     }
 
     public Long getId() {

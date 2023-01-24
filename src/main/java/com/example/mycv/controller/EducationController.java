@@ -10,4 +10,6 @@ public class EducationController {
     public String getContact() {
         return "education/education";
     }
+
+
 }

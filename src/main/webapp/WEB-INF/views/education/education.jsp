@@ -17,11 +17,10 @@
                     <h3 class="mb-0">Software Development Academy</h3>
                     <div class="subheading mb-3">Java from scratch</div>
                     <div>A comprehensive 327 hours (9 months) course, during which I learned many technologies, good
-                        practices and methodologies, including:
-                    </div>
-                    <p>advanced Java, OOP, design patterns, Git, Maven, SQL, JDBC, JPA / Hibernate, JUnit, AssertJ,
+                        practices and methodologies, including: advanced Java, OOP, design patterns, Git, Maven, SQL, JDBC, JPA / Hibernate, JUnit, AssertJ,
                         Mockito, TDD, HTML, CSS, JavaScript, TypeScript, Angular, React, Spring, Spring Boot, Spring
-                        Data JPA, Spring Web, Spring Security, MVC, Postman, REST API, Agile & Scrum.</p>
+                        Data JPA, Spring Web, Spring Security, MVC, Postman, REST API, Agile & Scrum.
+                    </div>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">June 2022 - Present</span></div>
             </div>
