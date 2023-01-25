@@ -1,10 +1,12 @@
 package com.example.mycv.service;
 
+import com.example.mycv.model.About;
 import com.example.mycv.model.Contact;
 import com.example.mycv.repository.ContactRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContactService {
@@ -19,7 +21,7 @@ public class ContactService {
         repo.save(contact);
     }
 
-    public void editContact(Contact contact) {
+    public void saveEditContact(Contact contact) {
         repo.save(contact);
     }
 
@@ -29,6 +31,15 @@ public class ContactService {
 
     public List<Contact> getContactList() {
         return repo.findAll();
+    }
+
+    public Contact getContactById(Long id) {
+        Optional<Contact> contact = repo.findById(id);
+        if (contact.isPresent()) {
+            return repo.findById(id).orElse(null);
+        } else {
+            return null;
+        }
     }
 
 }

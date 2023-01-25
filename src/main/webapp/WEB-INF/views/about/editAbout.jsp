@@ -61,13 +61,6 @@
         <input class="btn btn-success pull-left" type="submit" value="Save changes" id="saveButton"></input>
         <sec:csrfInput/>
     </form>
-    <div>
-        <form method="post" action='<c:url value="/about/${about.id}"/>'>
-            <input class="btn btn-danger pull-left" type="submit" value="Delete" id="deleteButton"></input>
-            <sec:csrfInput/>
-        </form>
-    </div>
-
 </div>
 </body>
 

@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <body id="page-top">
 <!-- Navigation-->
@@ -25,6 +27,11 @@
                 <h3><i class="fa fa-envelope cl-atlantis fa-2xs"></i> E-mail</h3>
                 <p><a href="mailto:${title.email}">${title.email}</a></p>
             </div>
+            <security:authorize access="hasAnyRole('ADMIN')">
+                <a href='<c:url value="/editContact/${title.id}"/>'
+                   class="btn btn-general btn-secondary mb-3" role="button">Edit</a>
+                <sec:csrfInput/>
+            </security:authorize>
             </c:forEach>
         </div>
     </section>
