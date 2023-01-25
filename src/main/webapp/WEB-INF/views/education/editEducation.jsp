@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <body id="page-top">
 <!-- Navigation-->
@@ -58,10 +59,12 @@
             </div>
         </div>
         <input class="btn btn-success pull-left" type="submit" value="Save changes" id="saveButton"></input>
+        <sec:csrfInput/>
     </form>
     <div>
         <form method="post" action='<c:url value="/education/${education.id}"/>'>
             <input class="btn btn-danger pull-left" type="submit" value="Delete" id="deleteButton"></input>
+            <sec:csrfInput/>
         </form>
     </div>
 

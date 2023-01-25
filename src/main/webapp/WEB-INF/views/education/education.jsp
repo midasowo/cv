@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <body id="page-top">
 <!-- Navigation-->
@@ -20,8 +22,11 @@
                         <div class="subheading mb-3">${title.title}</div>
                         <div>${title.description}</div>
                         <div>
+                            <security:authorize access="hasAnyRole('ADMIN')">
                                <a href='<c:url value="/editEducation/${title.id}"/>'
                                class="btn btn-general btn-secondary" role="button">Edit</a>
+                                <sec:csrfInput/>
+                            </security:authorize>
                         </div>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">${title.start} - ${title.finish}</span></div>
@@ -31,6 +36,7 @@
         </div>
         <hr class="m-0"/>
     </section>
+    <security:authorize access="hasAnyRole('ADMIN')">
     <form method="post" action='<c:url value="/education"/>'>
         <!-- Content Row -->
         <div class="row">
@@ -78,7 +84,9 @@
             </div>
         </div>
         <input class="btn btn-general btn-success" type="submit" value="Add" id="searchButton"></input>
+        <sec:csrfInput/>
     </form>
+    </security:authorize>
 
 </div>
 </body>
