@@ -4,6 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@include file="dynamic/css.jspf"%>
 
+
     <body id="page-top">
         <!-- Navigation-->
         <%@include file="dynamic/navigationMain.jspf"%>
