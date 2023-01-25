@@ -19,12 +19,66 @@
                         <h3 class="mb-0">${title.schoolName}</h3>
                         <div class="subheading mb-3">${title.title}</div>
                         <div>${title.description}</div>
+                        <div>
+                               <a href='<c:url value="/editEducation/${title.id}"/>'
+                               class="btn btn-general btn-secondary" role="button">Edit</a>
+                        </div>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">${title.start} - ${title.finish}</span></div>
                 </div>
             </c:forEach>
         </div>
+        <hr class="m-0"/>
     </section>
-    <hr class="m-0"/>
+    <form method="post" action='<c:url value="/education"/>'>
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-xl-12 col-md-12 mb-12">
+                <div class="card shadow mb-sm-2">
+                    <h4> Add education</h4>
+                    <div class="card-header py-3">
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">School</label>
+                            <div class="col-10">
+                                <input class="form-control" name="schoolName" type="text"
+                                       placeholder="complete the name of the school">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Title</label>
+                            <div class="col-10">
+                                <input class="form-control" name="title" type="text" placeholder="complete the title">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Start</label>
+                            <div class="col-10">
+                                <input class="form-control" name="start" type="text"
+                                       placeholder="beginning in 'month year' format">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Finish</label>
+                            <div class="col-10">
+                                <input class="form-control" name="finish" type="text"
+                                       placeholder="finish in 'month year' format">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="description" class="col-2 col-form-label">Description</label>
+                            <div class="col-10">
+                                <textarea class="form-control" rows="5" id="description"
+                                          name="description" placeholder="description (not required)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input class="btn btn-general btn-success" type="submit" value="Add" id="searchButton"></input>
+    </form>
+
 </div>
 </body>
