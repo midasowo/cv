@@ -34,8 +34,8 @@
         <!-- Content Row -->
         <div class="row">
             <div class="col-xl-12 col-md-12 mb-12">
-                <div class="card shadow mb-sm-2">
-                    <h4> Add education</h4>
+                <div class="card shadow mb-4">
+                    <h4>Add education</h4>
                     <div class="card-header py-3">
                         <div class="form-group row">
                             <label class="col-2 col-form-label">School</label>
@@ -67,10 +67,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="description" class="col-2 col-form-label">Description</label>
+                            <label class="col-2 col-form-label">Description</label>
                             <div class="col-10">
-                                <textarea class="form-control" rows="5" id="description"
-                                          name="description" placeholder="description (not required)"></textarea>
+                                <textarea class="form-control" rows="5" name="description" placeholder="description (not required)"></textarea>
                             </div>
                         </div>
                     </div>

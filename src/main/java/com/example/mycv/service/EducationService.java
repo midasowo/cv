@@ -5,6 +5,7 @@ import com.example.mycv.repository.EducationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EducationService {
@@ -19,7 +20,7 @@ public class EducationService {
         repo.save(education);
     }
 
-    public void editEducation(Education education) {
+    public void saveEditEducation(Education education) {
         repo.save(education);
     }
 
@@ -29,5 +30,14 @@ public class EducationService {
 
     public List<Education> getEducationList() {
         return repo.findAll();
+    }
+
+    public Education getEducationById(Long id) {
+        Optional<Education> education = repo.findById(id);
+        if (education.isPresent()) {
+            return repo.findById(id).orElse(null);
+        } else {
+            return null;
+        }
     }
 }
