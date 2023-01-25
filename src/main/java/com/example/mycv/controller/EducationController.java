@@ -38,7 +38,7 @@ public class EducationController {
         Education education = service.getEducationById(id);
         model.addAttribute("education", education);
         return "education/editEducation";
-    }/**/
+    }
 
     @PostMapping("/education/{id}")
     public RedirectView removeEducation(@PathVariable("id") Long id) {

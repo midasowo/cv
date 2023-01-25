@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <body id="page-top">
 <!-- Navigation-->
@@ -22,12 +24,18 @@
                     <span class="text-primary">${title.title}</span>
                 </div>
                 <p class="lead mb-5">${title.description}</p>
+                <security:authorize access="hasAnyRole('ADMIN')">
+                    <a href='<c:url value="/editAbout/${title.id}"/>'
+                       class="btn btn-general btn-secondary mb-3" role="button">Edit</a>
+                    <sec:csrfInput/>
+                </security:authorize>
                 <div class="social-icons">
                     <a class="social-icon" href="https://www.linkedin.com/in/${title.linkedin}/" target="_blank"><i
                             class="fab fa-linkedin-in"></i></a>
                     <a class="social-icon" href="https://github.com/${title.github}" target="_blank"><i
                             class="fab fa-github"></i></a>
                 </div>
+
             </c:forEach>
         </div>
     </section>
