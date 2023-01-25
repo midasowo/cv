@@ -59,9 +59,11 @@
         </div>
         <input class="btn btn-success pull-left" type="submit" value="Save changes" id="saveButton"></input>
     </form>
-    <form method="post" action='<c:url value="/editEducation/${education.id}"/>'>
-        <input class="btn btn-danger pull-left" type="submit" value="Delete" id="deleteButton"></input>
-    </form>
+    <div>
+        <form method="post" action='<c:url value="/education/${education.id}"/>'>
+            <input class="btn btn-danger pull-left" type="submit" value="Delete" id="deleteButton"></input>
+        </form>
+    </div>
 
 </div>
 </body>

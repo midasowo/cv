@@ -27,6 +27,7 @@
                     <div class="flex-shrink-0"><span class="text-primary">${title.start} - ${title.finish}</span></div>
                 </div>
             </c:forEach>
+
         </div>
         <hr class="m-0"/>
     </section>
