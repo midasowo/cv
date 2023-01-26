@@ -1,10 +1,12 @@
 package com.example.mycv.service;
 
+import com.example.mycv.model.Education;
 import com.example.mycv.model.Experience;
 import com.example.mycv.repository.ExperienceRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ExperienceService {
@@ -19,7 +21,7 @@ public class ExperienceService {
         repo.save(experience);
     }
 
-    public void editExperience(Experience experience) {
+    public void saveEditExperience(Experience experience) {
         repo.save(experience);
     }
 
@@ -29,5 +31,14 @@ public class ExperienceService {
 
     public List<Experience> getExperienceList() {
         return repo.findAll();
+    }
+
+    public Experience getExperienceById(Long id) {
+        Optional<Experience> experience = repo.findById(id);
+        if (experience.isPresent()) {
+            return repo.findById(id).orElse(null);
+        } else {
+            return null;
+        }
     }
 }

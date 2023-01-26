@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf" %>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <body id="page-top">
@@ -23,8 +23,8 @@
                         <div>${title.description}</div>
                         <div>
                             <security:authorize access="hasAnyRole('ADMIN')">
-                               <a href='<c:url value="/editEducation/${title.id}"/>'
-                               class="btn btn-general btn-secondary" role="button">Edit</a>
+                                <a href='<c:url value="/editEducation/${title.id}"/>'
+                                   class="btn btn-general btn-secondary" role="button">Edit</a>
                                 <sec:csrfInput/>
                             </security:authorize>
                         </div>
@@ -37,56 +37,57 @@
         <hr class="m-0"/>
     </section>
     <security:authorize access="hasAnyRole('ADMIN')">
-    <form method="post" action='<c:url value="/education"/>'>
-        <!-- Content Row -->
-        <div class="row">
-            <div class="col-xl-12 col-md-12 mb-12">
-                <div class="card shadow mb-4">
-                    <h4>Add education</h4>
-                    <div class="card-header py-3">
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">School</label>
-                            <div class="col-10">
-                                <input class="form-control" name="schoolName" type="text"
-                                       placeholder="complete the name of the school">
+        <form method="post" action='<c:url value="/education"/>'>
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-xl-12 col-md-12 mb-12">
+                    <div class="card shadow mb-4">
+                        <h4>Add education</h4>
+                        <div class="card-header py-3">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">School</label>
+                                <div class="col-10">
+                                    <input class="form-control" name="schoolName" type="text"
+                                           placeholder="complete the name of the school">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">Title</label>
-                            <div class="col-10">
-                                <input class="form-control" name="title" type="text" placeholder="complete the title">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Title</label>
+                                <div class="col-10">
+                                    <input class="form-control" name="title" type="text"
+                                           placeholder="complete the title">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">Start</label>
-                            <div class="col-10">
-                                <input class="form-control" name="start" type="text"
-                                       placeholder="beginning in 'month year' format">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Start</label>
+                                <div class="col-10">
+                                    <input class="form-control" name="start" type="text"
+                                           placeholder="beginning in 'month name - year' format">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">Finish</label>
-                            <div class="col-10">
-                                <input class="form-control" name="finish" type="text"
-                                       placeholder="finish in 'month year' format">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Finish</label>
+                                <div class="col-10">
+                                    <input class="form-control" name="finish" type="text"
+                                           placeholder="finish in 'month name - year' format' format">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">Description</label>
-                            <div class="col-10">
-                                <textarea class="form-control" rows="5" name="description" placeholder="description (not required)"></textarea>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Description</label>
+                                <div class="col-10">
+                                    <textarea class="form-control" rows="5" name="description"
+                                              placeholder="description (not required)"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <input class="btn btn-general btn-success" type="submit" value="Add" id="searchButton"></input>
-        <sec:csrfInput/>
-    </form>
+            <input class="btn btn-general btn-success" type="submit" value="Add" id="searchButton"></input>
+            <sec:csrfInput/>
+        </form>
     </security:authorize>
-
 </div>
 </body>
