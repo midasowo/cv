@@ -52,7 +52,7 @@
                             <div class="form-group row">
                                 <label class="col-2 col-form-label">Company name</label>
                                 <div class="col-10">
-                                    <input class="form-control" name="title" type="text" placeholder="complete company name">
+                                    <input class="form-control" name="companyName" type="text" placeholder="complete company name">
                                 </div>
                             </div>
 
