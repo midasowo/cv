@@ -5,6 +5,7 @@ import com.example.mycv.repository.SkillRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SkillService {
@@ -19,7 +20,7 @@ public class SkillService {
         repo.save(skill);
     }
 
-    public void editSkill(Skill skill) {
+    public void saveEditSkill(Skill skill) {
         repo.save(skill);
     }
 
@@ -29,5 +30,14 @@ public class SkillService {
 
     public List<Skill> getSkillList() {
         return repo.findAll();
+    }
+
+    public Skill getSkillById(Long id) {
+        Optional<Skill> skill = repo.findById(id);
+        if (skill.isPresent()) {
+            return repo.findById(id).orElse(null);
+        } else {
+            return null;
+        }
     }
 }
