@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
-public class Auth {
+public class Authorization {
 
 
     @Bean
