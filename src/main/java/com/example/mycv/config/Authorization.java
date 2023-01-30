@@ -41,7 +41,7 @@ public class Authorization {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/")
+                .antMatchers("/", "/resources/**")
                 .permitAll()
                 .antMatchers("/editAbout/**", "/editContact/**", "/editEducation/**", "/editExperience/**", "/editInterests/**", "/editSkills/**")
                 .hasAnyRole("ADMIN")
