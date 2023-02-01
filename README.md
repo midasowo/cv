@@ -10,3 +10,4 @@ It's similar to a CV generator.
 * Java 17
 * Spring Security
 * mySQL
+* Bootstrap
