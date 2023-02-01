@@ -1,6 +1,5 @@
 package com.example.mycv.service;
 
-import com.example.mycv.model.About;
 import com.example.mycv.model.Interest;
 import com.example.mycv.repository.InterestRepository;
 import org.springframework.stereotype.Service;
