@@ -12,13 +12,13 @@
         <section class="resume-section" id="">
             <div class="resume-section-content">
                     <h1 class="mb-0">
-                            FREE
-                        <span class="text-primary">CV Generator</span>
+                            CV
+                        <span class="text-primary">KRZYSZTOF MIDUCH</span>
                     </h1>
                     <div class="subheading mb-4">
-                        <span class="text-primary">Just Edit The Fields</span>
+                        <span class="text-primary">if you want to view individual pages, use "test" login and "test" password</span>
                     </div>
-                    <p class="lead mb-5">See how easy you will create your own CV!</p>
+                    <p class="lead mb-5">Just click on tabs!</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/krzysztof-miduch/" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a>
