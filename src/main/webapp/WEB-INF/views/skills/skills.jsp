@@ -23,34 +23,15 @@
                         <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
                             ${title.techSkill}
 
-                            <security:authorize access="hasAnyRole('ADMIN')">
-                                <a href='<c:url value="/editSkills/${title.id}"/>'
-                                   class="btn btn-sm btn-secondary" role="button">Edit</a>
-                                <sec:csrfInput/>
-                            </security:authorize>
-
-                    </li>
-                </ul>
-            </c:forEach>
-
-            <div class="mb-5"></div>
-            <div class="subheading mb-3">Soft skills</div>
-
-            <c:forEach items="${skills}" var="title">
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>
-                            ${title.softSkill}
-
                         <security:authorize access="hasAnyRole('ADMIN')">
                             <a href='<c:url value="/editSkills/${title.id}"/>'
                                class="btn btn-sm btn-secondary" role="button">Edit</a>
                             <sec:csrfInput/>
                         </security:authorize>
+
                     </li>
                 </ul>
             </c:forEach>
-
         </div>
         <hr class="m-0"/>
     </section>
@@ -77,28 +58,6 @@
             <sec:csrfInput/>
         </form>
     </security:authorize>
-    <security:authorize access="hasAnyRole('ADMIN')">
-        <form method="post" action='<c:url value="/skills"/>'>
-            <!-- Content Row -->
-            <div class="row">
-                <div class="col-xl-12 col-md-12 mb-12">
-                    <div class="card shadow mb-1">
-                        <h4>Add soft skills</h4>
-                        <div class="card-header py-3">
-                            <div class="form-group row">
-                                <label class="col-2 col-form-label">Soft skill</label>
-                                <div class="col-10">
-                                    <input class="form-control" name="softSkill" type="text"
-                                           placeholder="soft skill">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input class="btn btn-general btn-success mb-4" type="submit" value="Add" id="searchButton"></input>
-            <sec:csrfInput/>
-        </form>
-    </security:authorize>
+
 </div>
 </body>
