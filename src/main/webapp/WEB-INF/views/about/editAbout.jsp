@@ -30,6 +30,13 @@
                                        value="${about.lastName}">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Title</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" name="title"
+                                       value="${about.title}">
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label class="col-2 col-form-label">LinkedIn URL name</label>
@@ -58,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <input class="btn btn-success pull-left" type="submit" value="Save changes" id="saveButton"></input>
+        <input class="btn btn-success pull-left" type="submit" value="Save" id="saveButton"></input>
         <sec:csrfInput/>
     </form>
 </div>
