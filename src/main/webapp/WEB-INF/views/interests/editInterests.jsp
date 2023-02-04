@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <input class="btn btn-success pull-left" type="submit" value="Save changes" id="saveButton"></input>
+        <input class="btn btn-success pull-left" type="submit" value="Save" id="saveButton"></input>
         <sec:csrfInput/>
     </form>
 </div>
