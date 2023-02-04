@@ -27,7 +27,6 @@ public class SkillController {
         return "skills/skills";
     }
 
-
     @PostMapping("/skills")
     public RedirectView postSkill(Skill skill) {
         service.addSkill(skill);

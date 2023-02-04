@@ -54,6 +54,7 @@ public class Authorization {
                 .and()
                 .formLogin()
                 .permitAll()
+                .defaultSuccessUrl("/about")
                 .and()
                 .logout()
                 .logoutUrl("/logout")

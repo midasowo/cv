@@ -18,10 +18,10 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <div class="form-group row">
-                            <label class="col-2 col-form-label">Soft skill</label>
+                            <label class="col-2 col-form-label">Tech skill</label>
                             <div class="col-10">
-                                <input class="form-control" type="text" name="softSkill"
-                                       value="${skills.softSkill}">
+                                <input class="form-control" type="text" name="techSkill"
+                                       value="${skills.techSkill}">
                             </div>
                         </div>
                     </div>
