@@ -6,8 +6,8 @@ It's similar to a CV generator.
 
 ## Used tech stack
 
-* Spring Boot 2.7.7
+* Spring Boot
 * Java 17
 * Spring Security
-* mySQL
+* MySQL
 * Bootstrap
