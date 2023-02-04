@@ -13,7 +13,7 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href='<c:url value="/skills"/>'>Skills</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href='<c:url value="/interests"/>'>Interests</a></li>
             <li class="nav-item mb-3"><a class="nav-link js-scroll-trigger" href='<c:url value="/contact"/>'>Contact</a></li>
-            <li class="nav-item mb-2"><a class="btn btn-secondary pull-left" href='<c:url value="/logout"/>'><b>LOGOUT</b></a></li>
+            <li class="nav-item mb-2"><a class="btn btn-danger pull-left" href='<c:url value="/logout"/>'><b>LOGOUT</b></a></li>
         </ul>
     </div>
 </nav>
