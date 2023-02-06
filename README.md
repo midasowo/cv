@@ -8,6 +8,12 @@ It's similar to a CV generator.
 
 * Spring Boot
 * Java 17
+* Spring MVC
+* Spring Data JPA
 * Spring Security
 * MySQL
 * Bootstrap
+
+## Working application:
+[LINK](http://midas.alwaysdata.net/)
+
